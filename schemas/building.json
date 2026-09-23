@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Building proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "model", "neighbourhood", "purpose"],
+  "properties": {
+    "name": { "type": "string", "maxLength": 40 },
+    "model": { "type": "string", "enum": ["com/building-a", "com/building-b", "com/building-c", "com/building-d", "com/building-e", "com/building-f", "com/building-g", "com/building-h",
+      "sub/building-type-a", "sub/building-type-f", "sub/building-type-k", "sub/building-type-p", "ind/building-a", "ind/building-c", "ind/water-tower", "ind/windmill"] },
+    "neighbourhood": { "type": "string", "enum": ["blue", "green", "red", "yellow"] },
+    "purpose": { "type": "string", "maxLength": 200 },
+    "proposed_by": { "type": "string", "maxLength": 40 }
+  }
+}

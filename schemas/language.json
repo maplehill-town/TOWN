@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Group language",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["group", "words"],
+  "properties": {
+    "group": { "type": "string", "maxLength": 40 },
+    "words": { "type": "object", "maxProperties": 200, "additionalProperties": { "type": "string", "maxLength": 80 },
+      "propertyNames": { "pattern": "^[a-z][a-z'-]{1,19}$" } },
+    "proposed_by": { "type": "string", "maxLength": 40 }
+  }
+}
